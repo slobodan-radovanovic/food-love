@@ -12,7 +12,9 @@
                     <span><a href="/login"><i class="fa fa-2x fa-user" aria-hidden="true"></i>&nbsp;Prijava&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
                 <span><a href="/register"><i class="fa fa-2x fa-user-plus" aria-hidden="true"></i>&nbsp;Registracija</a></span>
                 <span><a href="/cart"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <i class="fa fa-2x fa-shopping-cart" aria-hidden="true"></i>Porudžbina {{ Session::has('cart') ? Session::get('cart.qty') : ''}}</a></span>
+                            <i class="fa fa-2x fa-shopping-cart" aria-hidden="true"></i>Porudžbina
+                        ({{ Session::has('cart') ? Session::get('cart.qty') : '0'}})
+                    </a></span>
 
 
 

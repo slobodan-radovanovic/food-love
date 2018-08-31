@@ -11,21 +11,13 @@ class CategoryController extends Controller
 {
     public function index() {
         $categories = Category::with('Addition')->get();
-        /*$products = Product::with('Ingredient')->get();*/
 
-
-
-        $data = [
-            'categories'  => $categories,
-            /*'products' => $products,*/
-        ];
-
-        return view('categories.index')->with($data);
+        return view('categories.index')->with('categories', $categories);
     }
 
-    public function show($id)
+    /*public function show($id)
     {
         $category =  Category::find($id);
         return view('categories.show')->with('category', $category);
-    }
+    }*/
 }

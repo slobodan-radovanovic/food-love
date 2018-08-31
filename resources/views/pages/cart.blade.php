@@ -15,7 +15,7 @@
             <th scope="col">Kolicina</th>
             <th scope="col">Ukupno</th>
             <th scope="col">Napomena</th>
-            {{--<th scope="col">Prilozi/Dodaci</th>--}}
+            <th scope="col">Prilozi/Dodaci</th>
 
         </tr>
         </thead>
@@ -27,22 +27,24 @@
                 <td>{{$item->sum}}</td>
                 <td>{{$item->note}}</td>
 
-                {{--<td>{{$items->additions}}</td>--}}
-
-                {{--@if(count($items->additions)>0)
-                    <td>
-                    @foreach($items->additions as $addition)
-                    {{ $addition }},
-                    @endforeach
+                {{--<td>{{var_dump($item->additions)}}</td>--}}
+                <td>
+                @if(count($item->additions)>0)
+                        @include('inc.addition')
+                @endif
                     </td>
-                @endif--}}
 
             </tr>
         @endforeach
     </table>
+            {!! Form::open(['action' => ['CartController@destroy', 0], 'method' => 'DELETE']) !!}
+            {{Form::submit('Isprazni korpu', ['class' => 'btn danger btn-large'])}}
+            {!! Form::close() !!}
     @else
         <p>Niste ubacili nijedan proizvod u porudžbinu</p>
     @endif
+
+
         <br>
         <br>
         <br>

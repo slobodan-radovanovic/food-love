@@ -20,5 +20,7 @@ class DatabaseSeeder extends Seeder
         $this->call('ProductIngredientTableSeeder');
         $this->call('AdditionsTableSeeder');
         $this->call('CategoryAdditionTableSeeder');
+        $this->call('TypesTableSeeder');
+        $this->call('ProductTypeTableSeeder');
     }
 }

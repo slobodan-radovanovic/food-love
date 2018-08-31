@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Product;
 use App\Cart;
+use App\Type;
+use Illuminate\Support\Facades\Session;
+
+
 
 class CartController extends Controller
 {
@@ -44,63 +48,53 @@ class CartController extends Controller
         $quantity = (int)$request->input('quantity');
         $product = Product::find($product_id);
 
-        if(null != $request->input('type')){
-            $type = $request->input('type');
-
-            if ($type == 'Kifla' || $type == '28cm' || $type == 'Limenka 0,33l') {
-                $type_id = 1;
-            }else if ($type == 'Tortilja' || $type == '32cm' || $type == '0,5l') {
-                $type_id = 2;
-            }else if ($type == 'Wrap' || $type == '1l') {
-                $type_id = 3;
-            }else if ($type == '1,5l') {
-                $type_id = 4;
-            }else if ($type == '2l') {
-                $type_id = 5;
-            }
-
-            $price_id = 'price'.$type_id;
-            if($type_id==1){
-                $price = $product->price;
-            }else{
-                $price = $product->$price_id;
-            }
+        if($request->input('type') == null){
+            $type_name = null;
+            $price = $product->price;
         }else{
-            $type = null;
-            if(!is_null($product->price)){
-                $price = $product->price;
-            }else{
-                $price = $product->price2;
+            $type_id = $request->input('type');
+            $type = Type::find($type_id);
+            $type_name = $type->type_name;
+            $type_price = $type->price;
+            $price = $product->$type_price;
+        }
+
+        if($request->input('additions') == null){
+            $additions = null;
+        }else{
+            $additions = $request->input('additions');
+            foreach($additions as $adition){
+                if($adition->addition_price != null){
+                    $price += $adition->addition_price;
+                }
+
             }
         }
 
         $sum = $price * $quantity;
         $note = $request->input('note');
 
-        if(null != $request->input('additions')){
-            $additions_array = $request->input('additions');
-            $additions_object = (object)$additions_array;
 
-        }else{
-            $additions_object = null;
-        }
         $item = new Cart();
         $item->product_id = $product_id;
         $item->product_name = $product->product_name;
-        $item->type = $type;
+        $item->type = $type_name;
         $item->price = $price;
         $item->quantity = $quantity;
         $item->sum = $sum;
         $item->note = $note;
-        $item->additions = $additions_object;
+        $item->additions = $additions;
 
+        Session::push('cart.items', $item);
+        if(Session::has('cart.qty')){
+            $old_cart_qty = Session::get('cart.qty');
+        }else{
+            $old_cart_qty = 0;
+        }
+        $new_cart_qty = $old_cart_qty + $quantity;
+        Session::put('cart.qty', $new_cart_qty);
 
-        /*session()->forget('cart');*/
-        $request->session()->push('cart.items', $item);
-        $cart_qty = count(session()->get('cart.items'));
-        $request->session()->put('cart.qty', $cart_qty);
-
-        return redirect('cart');
+        return redirect('menu');
     }
 
     /**
@@ -134,7 +128,7 @@ class CartController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
     }
 
     /**
@@ -143,8 +137,9 @@ class CartController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy()
     {
-        //
+        session()->forget('cart');
+        return redirect('cart');
     }
 }

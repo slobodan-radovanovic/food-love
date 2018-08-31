@@ -22,8 +22,8 @@
             <div class="modal-body p-2">
 
 
-
-                        @switch($category->category_name)
+                @include('inc.types')
+                        {{--@switch($category->category_name)
                             @case('Sendviči')
                                 @include('inc.options.sendvici')
                             @break
@@ -33,13 +33,16 @@
                             @case('Pića')
                                 @include('inc.options.pica')
                             @break
-                        @endswitch
+                        @endswitch--}}
 
-
+                        <div id="price{{$product->id}}" class="modal-price">
                         @foreach ($prices as $price)
-                          <div id="price{{$product->id}}" class="modal-price">{{$price}} RSD </div>
+                            @if(count($product->type) < 2 )
+                                    {{$price}} RSD
+                                @endif
                           @break
                         @endforeach
+                        </div>
 
                 <label id="quantity" class="ml-5 mr-2">Količina:
                     <select name="quantity" id="quantity{{$product->id}}" data-quantity="1" data-id="{{$product->id}}">

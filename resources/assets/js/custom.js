@@ -224,30 +224,29 @@ function nav2position(div, topOff, start) {
 nav2position('#nav2', 115, 0);
 
 $('input[type=radio][class=radio]').change(function() {
-    if (this.value == 'Kifla' || this.value == '28cm' || this.value == 'Limenka 0,33l') {
-        /*console.log($(this).data("price"));
-        console.log($(this).data("id"));*/
+
+    var id = $(this).data("id");
+    $("#price"+id).text($(this).data("price")+" RSD");
+
+    /*if (this.value == 'price') {
+        /!*console.log($(this).data("price"));
+        console.log($(this).data("id"));*!/
         var id = $(this).data("id");
         $("#price"+id).text($(this).data("price")+" RSD");
-    }
-    else if (this.value == 'Tortilja' || this.value == '32cm' || this.value == '0,5l') {
-        /*console.log($(this).data("price"));
-        console.log($(this).data("id"));*/
+    }else if (this.value == 'price2') {
         var id = $(this).data("id");
         $("#price"+id).text($(this).data("price")+" RSD");
-    }else if (this.value == 'Wrap' || this.value == '1l') {
-        /*console.log($(this).data("price"));
-        console.log($(this).data("id"));*/
+    }else if (this.value == 'price3') {
         var id = $(this).data("id");
-        /*console.log($("#quantity"+id).data("quantity"));*/
+        /!*console.log($("#quantity"+id).data("quantity"));*!/
         $("#price"+id).text($(this).data("price")+" RSD");
-    }else if (this.value == '1,5l') {
+    }else if (this.value == 'price4') {
         var id = $(this).data("id");
         $("#price"+id).text($(this).data("price")+" RSD");
-    }else if (this.value == '2l') {
+    }else if (this.value == 'price5') {
         var id = $(this).data("id");
         $("#price"+id).text($(this).data("price")+" RSD");
-    }
+    }*/
 });
 
 

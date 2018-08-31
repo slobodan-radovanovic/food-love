@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container menu">
-    var_dump(session()->all());
+
     <nav id="nav2" class="col-lg-2">
         <ul><li><ul>
             @foreach($categories as $category)

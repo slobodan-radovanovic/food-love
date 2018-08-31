@@ -111,7 +111,7 @@ class ProductsTableSeeder extends Seeder
             ], [
                 'product_name' => 'Parma',
                 'price' => '270',
-                'price2' => null,
+                'price2' => '270',
                 'price3' => null,
                 'price4' => null,
                 'price5' => null,
@@ -119,63 +119,63 @@ class ProductsTableSeeder extends Seeder
             ], [
                 'product_name' => 'Cezar',
                 'price' => '260',
-                'price2' => '230',
-                'price3' => '240',
+                'price2' => '260',
+                'price3' => '230',
                 'price4' => null,
                 'price5' => null,
                 'category_id' => '3'
             ], [
                 'product_name' => 'Tzatziki',
                 'price' => '250',
-                'price2' => '220',
-                'price3' => '230',
+                'price2' => '250',
+                'price3' => '220',
                 'price4' => null,
                 'price5' => null,
                 'category_id' => '3'
             ], [
                 'product_name' => 'Susam',
                 'price' => '250',
-                'price2' => '220',
-                'price3' => '230',
+                'price2' => '250',
+                'price3' => '220',
                 'price4' => null,
                 'price5' => null,
                 'category_id' => '3'
             ], [
                 'product_name' => 'Pikant',
                 'price' => '260',
-                'price2' => '230',
-                'price3' => '240',
+                'price2' => '260',
+                'price3' => '230',
                 'price4' => null,
                 'price5' => null,
                 'category_id' => '3'
             ], [
                 'product_name' => 'Food & Love',
                 'price' => '270',
-                'price2' => '240',
-                'price3' => '250',
+                'price2' => '270',
+                'price3' => '240',
                 'price4' => null,
                 'price5' => null,
                 'category_id' => '3'
             ], [
                 'product_name' => 'Burgos',
                 'price' => '250',
-                'price2' => '220',
-                'price3' => '230',
+                'price2' => '250',
+                'price3' => '220',
                 'price4' => null,
                 'price5' => null,
                 'category_id' => '3'
             ], [
                 'product_name' => 'Hrskava piletina',
                 'price' => '270',
-                'price2' => '240',
-                'price3' => null,
+                'price2' => '270',
+                'price3' => '240',
                 'price4' => null,
                 'price5' => null,
                 'category_id' => '3'
             ], [
                 'product_name' => 'Index 1',
                 'price' => '190',
-                'price2' => null,
+                'price2' => '190',
                 'price3' => null,
                 'price4' => null,
                 'price5' => null,
@@ -183,7 +183,7 @@ class ProductsTableSeeder extends Seeder
             ], [
                 'product_name' => 'Index 2',
                 'price' => '200',
-                'price2' => null,
+                'price2' => '200',
                 'price3' => null,
                 'price4' => null,
                 'price5' => null,
@@ -191,7 +191,7 @@ class ProductsTableSeeder extends Seeder
             ], [
                 'product_name' => 'Index 3',
                 'price' => '220',
-                'price2' => null,
+                'price2' => '220',
                 'price3' => null,
                 'price4' => null,
                 'price5' => null,
@@ -199,47 +199,47 @@ class ProductsTableSeeder extends Seeder
             ], [
                 'product_name' => 'Food 1',
                 'price' => '250',
-                'price2' => '220',
-                'price3' => '230',
+                'price2' => '250',
+                'price3' => '220',
                 'price4' => null,
                 'price5' => null,
                 'category_id' => '3'
             ], [
                 'product_name' => 'Food 2',
                 'price' => '250',
-                'price2' => '220',
-                'price3' => '230',
+                'price2' => '250',
+                'price3' => '220',
                 'price4' => null,
                 'price5' => null,
                 'category_id' => '3'
             ], [
                 'product_name' => 'Dimljeni',
                 'price' => '260',
-                'price2' => '230',
-                'price3' => '240',
+                'price2' => '260',
+                'price3' => '230',
                 'price4' => null,
                 'price5' => null,
                 'category_id' => '3'
             ], [
                 'product_name' => 'Tuna',
                 'price' => '220',
-                'price2' => '200',
-                'price3' => null,
+                'price2' => '220',
+                'price3' => '200',
                 'price4' => null,
                 'price5' => null,
                 'category_id' => '3'
             ], [
                 'product_name' => 'Posni',
                 'price' => '230',
-                'price2' => '210',
-                'price3' => null,
+                'price2' => '230',
+                'price3' => '210',
                 'price4' => null,
                 'price5' => null,
                 'category_id' => '3'
             ], [
                 'product_name' => 'Užički',
                 'price' => '250',
-                'price2' => null,
+                'price2' => '250',
                 'price3' => null,
                 'price4' => null,
                 'price5' => null,
@@ -247,7 +247,7 @@ class ProductsTableSeeder extends Seeder
             ], [
                 'product_name' => 'Ajvar',
                 'price' => '250',
-                'price2' => null,
+                'price2' => '250',
                 'price3' => null,
                 'price4' => null,
                 'price5' => null,
@@ -255,8 +255,8 @@ class ProductsTableSeeder extends Seeder
             ], [
                 'product_name' => 'Goveđi',
                 'price' => null,
-                'price2' => '250',
-                'price3' => null,
+                'price2' => null,
+                'price3' => '250',
                 'price4' => null,
                 'price5' => null,
                 'category_id' => '3'

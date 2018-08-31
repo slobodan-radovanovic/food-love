@@ -13,64 +13,64 @@ class AdditionsTableSeeder extends Seeder
     {
         DB::table('additions')->insert(
             [[
-                'addition_name' => 'Plazma (+40din)',
+                'addition_name' => 'plazma (+40din)',
                 'addition_price' => '40'
             ], [
-                'addition_name' => 'Lešnik (+40din)',
+                'addition_name' => 'lešnik (+40din)',
                 'addition_price' => '40'
             ], [
-                'addition_name' => 'Orah (+40din)',
+                'addition_name' => 'orah (+40din)',
                 'addition_price' => '40'
             ], [
-                'addition_name' => 'Badem (+40din)',
+                'addition_name' => 'badem (+40din)',
                 'addition_price' => '40'
             ], [
-                'addition_name' => 'Kokos (+40din)',
+                'addition_name' => 'kokos (+40din)',
                 'addition_price' => '40'
             ], [
-                'addition_name' => 'Kikiriki (+40din)',
+                'addition_name' => 'kikiriki (+40din)',
                 'addition_price' => '40'
             ], [
-                'addition_name' => 'Voće (+40din)',
+                'addition_name' => 'voće (+40din)',
                 'addition_price' => '40'
             ], [
                 'addition_name' => 'plazma u melku (+50din)',
                 'addition_price' => '50'
             ], [
-                'addition_name' => 'Kupus',
+                'addition_name' => 'kupus',
                 'addition_price' => null
             ], [
-                'addition_name' => 'Luk',
+                'addition_name' => 'luk',
                 'addition_price' => null
             ], [
-                'addition_name' => 'Zelena salata',
+                'addition_name' => 'zelena salata',
                 'addition_price' => null
             ], [
-                'addition_name' => 'Majonez',
+                'addition_name' => 'majonez',
                 'addition_price' => null
             ], [
-                'addition_name' => 'Kečap',
+                'addition_name' => 'kečap',
                 'addition_price' => null
             ], [
-                'addition_name' => 'Kiseli krastavac',
+                'addition_name' => 'kiseli krastavac',
                 'addition_price' => null
             ], [
-                'addition_name' => 'Senf',
+                'addition_name' => 'senf',
                 'addition_price' => null
             ], [
-                'addition_name' => 'Pavlaka',
+                'addition_name' => 'pavlaka',
                 'addition_price' => null
             ], [
-                'addition_name' => 'Tucana paprika',
+                'addition_name' => 'tucana paprika',
                 'addition_price' => null
             ], [
-                'addition_name' => 'Čili',
+                'addition_name' => 'čili',
                 'addition_price' => null
             ], [
-                'addition_name' => 'Vegeta',
+                'addition_name' => 'vegeta',
                 'addition_price' => null
             ], [
-                'addition_name' => 'Kajmak (+30din)',
+                'addition_name' => 'kajmak (+30din)',
                 'addition_price' => '30'
             ]]
         );
